@@ -28,7 +28,7 @@ public class MarriotInterfaceImplementation implements MarriotInterface {
 		System.out.println("Name: "+roomBookings.get(0).getName());
 		System.out.println("Phone no: "+roomBookings.get(0).getPhone());
 		System.out.println("------------------------------------------------------------------------");
-		System.out.printf("%5s %15s %14s %15s %12s\n", "Room Type", "Room Price", "Quantity", "No of Days", "Amount");
+		System.out.printf("%5s %15s %14s %15s %12s\n", "Hall Type", "Hall Price", "Quantity", "No of Days", "Amount");
 		for (Reservation book : roomBookings) {
 			subtotal=calAmount(book.getRoomPrice(),book.getNoRooms(),book.getNoDays());
 			total+=subtotal;

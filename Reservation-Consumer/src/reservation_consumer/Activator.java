@@ -72,25 +72,25 @@ public class Activator implements BundleActivator {
 
 						while(signal.equals("y")) {
 							do {
-								System.out.println("\nSelect the room-");
-								System.out.println("1) Standard Room - 50000");
-								System.out.println("2) Deluxe Room - 80000");
-								System.out.println("3) Luxury Room - 90000\n");
-								System.out.print("Enter the room type: ");
+								System.out.println("\nSelect the hall-");
+								System.out.println("1) Banquet Hall - 50000");
+								System.out.println("2) BallRoom - 80000");
+								System.out.println("3) Conference Room - 90000\n");
+								System.out.print("Enter the hall type: ");
 								int bkroomtype= Integer.parseInt(scan.nextLine());
 
 								if(bkroomtype==1) {
-									roomName="Standard";
+									roomName="Banquet Hall";
 									roomPrice=50000;
 									break;
 								}
 								else if(bkroomtype==2) {
-									roomName="Deluxe";
+									roomName="BallRoom";
 									roomPrice=80000;
 									break;
 								}
 								else if(bkroomtype==3) {
-									roomName="Luxury";
+									roomName="Conference Room";
 									roomPrice=90000;
 									break;
 								}
@@ -99,20 +99,20 @@ public class Activator implements BundleActivator {
 								}
 							}while(true);
 
-							System.out.print("Enter the no of rooms: ");
+							System.out.print("Enter the no of halls: ");
 							int bknorooms= Integer.parseInt(scan.nextLine());
 
 							System.out.print("Enter the no of days: ");
 							int bknodays= Integer.parseInt(scan.nextLine());
 
-							System.out.print("Enter meal type: ");
+							System.out.print("Enter meal type veg or non-veg: ");
 							String bkmeals= scan.nextLine();
 
 							Reservation booking = new Reservation(bkname, bknic, bkphone, roomName, roomPrice , bknorooms, bkmeals, bknodays);
 
 							roomBookings.add(booking);
 
-							System.out.print("Do you want to book more rooms? If you want type 'y' else type 'n' : ");
+							System.out.print("Do you want to book more halls? If you want type 'y' else type 'n' : ");
 							signal= scan.nextLine();
 
 						}
@@ -153,25 +153,25 @@ public class Activator implements BundleActivator {
 
 						while(signal.equals("y")) {
 							do {
-								System.out.println("\nSelect the room-");
-								System.out.println("1) Standard Room - 30000");
-								System.out.println("2) Deluxe Room - 40000");
-								System.out.println("3) Luxury Room - 50000\n");
-								System.out.print("Enter the room type: ");
+								System.out.println("\nSelect the hall-");
+								System.out.println("1) Banquet Hall - 30000");
+								System.out.println("2) BallRoom - 40000");
+								System.out.println("3) Conference Room - 50000\n");
+								System.out.print("Enter the hall type: ");
 								int bkroomtype= Integer.parseInt(scan.nextLine());
 
 								if(bkroomtype==1) {
-									roomName="Standard";
+									roomName="Banquet Hall";
 									roomPrice=30000;
 									break;
 								}
 								else if(bkroomtype==2) {
-									roomName="Deluxe";
+									roomName="BallRoom";
 									roomPrice=40000;
 									break;
 								}
 								else if(bkroomtype==3) {
-									roomName="Luxury";
+									roomName="Conference Room";
 									roomPrice=50000;
 									break;
 								}
@@ -180,26 +180,15 @@ public class Activator implements BundleActivator {
 								}
 							}while(true);
 
-							System.out.print("Enter the no of rooms: ");
+							System.out.print("Enter the no of halls: ");
 							int bknorooms= Integer.parseInt(scan.nextLine());
 
-							if(bknorooms==1) {
-								System.out.print("Are you newly married couple trip? If you are type 'y' else type 'n' : ");
-								String dis = scan.nextLine();
 
-								if(dis.equals("y")) {
-									System.out.print("Congrats you have a discount for this booking!!!\n");
-									discount=20;
-								}
-								else {
-									discount=0;
-								}
-							}
 
 							System.out.print("Enter the no of days: ");
 							int bknodays= Integer.parseInt(scan.nextLine());
 
-							System.out.print("Enter meal type: ");
+							System.out.print("Enter meal type veg or non-veg: ");
 							String bkmeals= scan.nextLine();
 
 							ShangrillaReservation booking = new ShangrillaReservation(bkname, bknic, bkphone, roomName, roomPrice , bknorooms, bkmeals, bknodays);
@@ -207,7 +196,7 @@ public class Activator implements BundleActivator {
 							shangrillaroomBookings.add(booking);
 
 							if(bknorooms>1) {
-								System.out.print("Do you want to book more rooms? If you want type 'y' else type 'n' : ");
+								System.out.print("Do you want to book more halls? If you want type 'y' else type 'n' : ");
 								signal= scan.nextLine();
 							}
 							else {
